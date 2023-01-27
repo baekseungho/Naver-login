@@ -1,0 +1,11 @@
+$('.check-box').ready(function(){
+  $(".checking").change(function(){
+      if($(".checking").is(":checked")){
+        $('#check-on').show();
+        $('#check-off').hide();
+      }else{
+        $('#check-on').hide();
+        $('#check-off').show();
+      }
+  });
+});

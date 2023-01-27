@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+
+.wrapper{
+  padding: 40px;
+}
+.login-box{
+  margin: 0 auto;
+  width: 550px;
+}
+.logo{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.logo img{
+  width: 300px;
+}
+.agree-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.agree-box img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.check-box{
+  display: flex;
+}
+.check-box p{
+  margin: 10px 0;
+}
+#check-on{
+  display: none;
+}
+.language{
+  position: absolute;
+  right: 450px;
+  top: 50px;
+}
+.green{
+  color: green;
+  font-size: 0.8em;
+}
+.scroll-box{
+  overflow: scroll;
+  height: 150px;
+  flex-wrap: nowrap;
+  padding: 15px;
+  overflow-x: hidden;
+  width: 100%;
+  border: 1px solid #bbb;
+}
+.fotter-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+.fotter-wrapper button{
+  width: 49%;
+  height: 60px;
+  border-radius: 5px;
+  background-color: darkgreen;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+}

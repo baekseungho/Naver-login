@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join</title>
+  <link rel="stylesheet" href="./join.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="global-header">
+      <h1 class="logo">
+        <a href="http://naver.com">
+          <img src="./images/logo.png" alt="네이버 로고">
+        </a>
+      </h1>
+    </header>
+
+    <section class="join-box-list">
+      <form id="join-form" action="./submit.html">
+        <div class="join-box-item" id="userid">
+          <label for="">
+            <p>아이디</p>
+            <div class="inputbox">
+              <input type="text" name="userid">
+              <div>@naver.com</div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+        
+        <div class="join-box-item" id="userpw">
+          <label for="">
+            <p>비밀번호</p>
+            <div class="inputbox">
+              <input type="password" name="userpw">
+              <div>
+                <p></p>
+                <img src="./images/m_icon_pw_step_01.png" alt="비밀번호 아이콘">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="userpw-chk">
+          <label for="">
+            <p>비밀번호 재확인</p>
+            <div class="inputbox">
+              <input type="password" name="userpw-chk">
+              <div>
+                <p></p>
+                <img src="./images/m_icon_pw_step_02.png" alt="비밀번호 아이콘2">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="username">
+          <label for="">
+            <p>이름</p>
+            <div class="inputbox">
+              <input type="text" name="username">
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="birth">
+          <label for="">
+            <p>생년월일</p>
+            <div class="three-box">
+              <div class="inputbox">
+                <input type="text" name="birth" id="year" maxlength="4" placeholder="년(4자)" >
+              </div>
+              <div class="inputbox">
+                <select name="month" id="month">
+                  <option value="">월</option>
+                  <option value="0">1</option>
+                  <option value="1">2</option>
+                  <option value="2">3</option>
+                  <option value="3">4</option>
+                  <option value="4">5</option>
+                  <option value="5">6</option>
+                  <option value="6">7</option>
+                  <option value="7">8</option>
+                  <option value="8">9</option>
+                  <option value="9">10</option>
+                  <option value="10">11</option>
+                  <option value="11">12</option>
+                </select>
+              </div>
+              <div class="inputbox">
+                <input type="text" id="date" name="date" maxlength="2" placeholder="일">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="gender">
+          <label for="">
+            <p>성별</p>
+            <div class="three-box">
+              <div class="inputbox">
+                <input type="radio" name="gender" value="0">
+                남자
+              </div>
+              <div class="inputbox">
+                <input type="radio" name="gender" value="1">
+                여자
+              </div>
+              <div class="inputbox">
+                <input type="radio" name="gender" value="2">
+                선택안함
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="usermail">
+          <label for="">
+            <p>본인 확인 이메일<span class="text-secondary">(선택)</span></p>
+            <div class="inputbox">
+              <input type="text" name="usermail" placeholder="선택입력">
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="phone">
+          <label for="">
+            <p>휴대전화</p>
+            <div class="inputbox">
+              <select name="country">
+                <option value="233">가나 +233</option>
+                <option value="30">그리스 +30</option>
+                <option value="82" selected>대한민국 +82</option>
+                <option value="49">독일 +49</option>
+                <option value="960">몰디브 +960</option>
+                <option value="1">미국/캐나다 +1</option>
+                <option value="254">케나 +254</option>
+              </select>
+            </div>
+            <div id="phonenum">
+              <div class="inputbox">
+                <input type="text" name="phonenum" placeholder="전화번호 입력">
+              </div>
+              <button type="button" id="veribtn" class="btn-primary">인증번호 받기</button>
+            </div>
+            <div class="inputbox disinput">
+              <input type="text" id="veritext" name="veritext" placeholder="인증번호" disabled>
+              <div>
+                
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item" id="address">
+          <label for="">
+            <p>주소</p>
+            <div id="postnum">
+              <div class="inputbox">
+                <input type="text" id="sample6_postcode" placeholder="우편번호">
+              </div>
+              <button type="button" id="postnum-btn" class="btn-primary" onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
+            </div>
+            <div class="inputbox">
+              <input type="text" id="sample6_address" placeholder="주소">
+            </div>
+            <div class="inputbox">
+              <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+            </div>
+            <div class="inputbox">
+              <input type="text" id="sample6_extraAddress" placeholder="참고항목">
+            </div>
+          </label>
+        </div>
+
+        <button type="button" id="joinbtn" class="btn-primary">가입하기</button>
+        <div id="joinchk">
+          <p class="warn"></p>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="./js/join.js"></script>
+</body>
+</html>
